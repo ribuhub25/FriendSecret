@@ -9,7 +9,8 @@ export default function Friendsecret() {
   const navigate = useNavigate();
   const user = location.state;
   const [ showdiv , setShowdiv  ] = useState(false);
-  const [ participantes, setParticipantes ] = useState([]);
+  const [participantes, setParticipantes] = useState([]);
+  const apiURL = import.meta.env.REACT_APP_API_URL;
   function ShowInputs() {
     var txtName = document.getElementById("p1");
     if (showdiv) {
@@ -50,7 +51,7 @@ export default function Friendsecret() {
     navigate(`/sorts`, { state: obj });
   }
   async function GetUserId() {
-    const response = await fetch(`http://localhost:3500/users/${user.email}`, {
+    const response = await fetch(`${apiURL}/users/${user.email}`, {
       method: "GET",
     });
     const data = await response.json();
@@ -74,7 +75,7 @@ export default function Friendsecret() {
     };
     console.log(sort);
     
-    const response = await fetch("http://localhost:3500/sorts/create", {
+    const response = await fetch(`${apiURL}/sorts/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

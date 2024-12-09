@@ -5,11 +5,13 @@ import Profile from "./Profile";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/Shared/Loader";
 import { useState } from "react";
+
 export function Home() {
   const { user, isAuthenticated,getAccessTokenSilently } = useAuth0();
   const token = async () => await getAccessTokenSilently();
   const navigate = useNavigate();
   const [loader, setLoader] = useState(false);
+  const apiURL = import.meta.env.REACT_APP_API_URL;
   function ShowLoader(){
     setLoader(true);
   }
@@ -21,12 +23,9 @@ export function Home() {
     var code = document.getElementById("txtCode").value;
     console.log(code);
     try {
-      const response = await fetch(
-        `http://localhost:3500/couple/${code}`,
-        {
-          method: "GET",
-        }
-      );
+      const response = await fetch(`${apiURL}/couple/${code}`, {
+        method: "GET",
+      });
       const data = await response.json();
       return data;
     } catch (e) {

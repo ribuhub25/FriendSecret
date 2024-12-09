@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import Cardwish from "../components/Wishlist/Cardwish";
 import "./Wishlist.css";
 
-export default function Wishlist({ user = "Carlos" }) {
+export default function Wishlist({ user = "ROOT" }) {
   const location = useLocation();
   const data = location.state;
     return (
