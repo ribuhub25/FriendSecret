@@ -1,0 +1,32 @@
+.card-action{
+    margin: auto;
+}
+.title{
+    font-weight: 800;
+    color: #092170;
+}
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.msgIndication{
+    font-size: xx-large;
+    font-weight: lighter;
+    font-family: cursive;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .title {
+        text-align: center;
+        font-size: xx-large;
+        color: #092170;
+    }
+}

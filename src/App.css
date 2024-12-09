@@ -1,0 +1,16 @@
+.app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+img {
+    width: 300px;
+}
+
+.card {
+    width: 300px;
+}
+@media (max-width: 768px) {
+
+}

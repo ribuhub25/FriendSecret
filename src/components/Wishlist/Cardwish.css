@@ -1,0 +1,13 @@
+.title-wish-first{
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+}
+.title-wish{
+    color: white;
+    font-weight: lighter;
+    font-size: larger;
+}
+.title-container{
+    padding: 10px;
+}

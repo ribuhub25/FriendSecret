@@ -1,0 +1,17 @@
+.dFirst{
+    display: block;
+}
+.title-card{
+    font-weight: bold;
+    font-size: x-large;
+    color: #440044;
+}
+.sort-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img-foot{
+    width: 100px;
+    height: 100px;
+}

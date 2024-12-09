@@ -1,0 +1,7 @@
+#root{
+ font-family: system-ui;
+ background-color: rgb(203, 185, 228);
+ /* background-image: url("/src/assets/fondo2.avif"); */
+ background-position: center;
+ background-size: cover;
+}   

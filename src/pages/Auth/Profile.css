@@ -1,0 +1,12 @@
+.navigate-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .card{
+        width: 280px;
+    }
+
+}
