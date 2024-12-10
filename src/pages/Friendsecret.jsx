@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Friendsecret.css";
 import { toast } from "materialize-css";
-import Inputext from "../components/FriendSecret/inputext";
+import Inputext from "../components/FriendSecret/Inputext";
 
 export default function Friendsecret() { 
   const location = useLocation();
