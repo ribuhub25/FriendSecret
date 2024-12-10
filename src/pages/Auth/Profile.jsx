@@ -4,10 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function Profile({ isAuthenticated, user, token }) {
   const navigate = useNavigate();
-  const apiUrl = import.meta.env.REACT_APP_API_URL;
   async function api() {
     var tkn = await token();
-    const response = await fetch(`${apiUrl}/users/save`, {
+    const response = await fetch(`http://localhost:3500/users/save`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${tkn}`,

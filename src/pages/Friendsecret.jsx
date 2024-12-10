@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Friendsecret.css";
 import InputText from "../components/FriendSecret/inputText";
@@ -10,7 +10,6 @@ export default function Friendsecret() {
   const user = location.state;
   const [ showdiv , setShowdiv  ] = useState(false);
   const [participantes, setParticipantes] = useState([]);
-  const apiURL = import.meta.env.REACT_APP_API_URL;
   function ShowInputs() {
     var txtName = document.getElementById("p1");
     if (showdiv) {
@@ -51,7 +50,7 @@ export default function Friendsecret() {
     navigate(`/sorts`, { state: obj });
   }
   async function GetUserId() {
-    const response = await fetch(`${apiURL}/users/${user.email}`, {
+    const response = await fetch(`http://localhost:3500/users/${user.email}`, {
       method: "GET",
     });
     const data = await response.json();
@@ -75,7 +74,7 @@ export default function Friendsecret() {
     };
     console.log(sort);
     
-    const response = await fetch(`${apiURL}/sorts/create`, {
+    const response = await fetch(`http://localhost:3500/sorts/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -111,6 +110,19 @@ export default function Friendsecret() {
     
   }
 
+  useEffect(() => {
+    M.AutoInit();
+    document.addEventListener("DOMContentLoaded", function () {
+      var elems = document.querySelectorAll(".datepicker");
+      //var instances = M.Datepicker.init(elems, options);
+      M.Datepicker.init(elems);
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      var elems = document.querySelectorAll(".collapsible");
+      var instances = M.Collapsible.init(elems, options);
+    });
+  }, []);
+  
   return (
     <section>
       <img

@@ -1,15 +1,33 @@
+import { useEffect, useState } from "react";
+import "./Cardsort.css";
+import CodesContent from "./CodesContent";
+
 export default function DivContentFirst({ eventDate, hostName, sortId }) {
-  async function handleClick() {
-    const codes = await getCodesBySort();
-    const showCodesElement = document.getElementById(`showCodes${sortId}`);
-    codes.forEach((code) => {
-      const div = document.createElement("div");
-      div.textContent = code;
-      showCodesElement.appendChild(div);
-    });
-    console.log(codes);
-    
+  const [codes, setCodes] = useState([])
+  const [statebutton, setStatebutton] = useState(false);
+  async function getCodes() {
+    const data = await getCodesBySort();
+    console.log(data);
+    setCodes([...codes, data]);
+  };
+  useEffect(() => {
+    if (statebutton) {
+     getCodes()
+    } else {
+      setCodes([]);
+   }
+ },[statebutton] )
+
+  async function handleClick(e) {
+    const btnId = document.getElementById(`btn${sortId}`);
+    if (!statebutton) {
+        btnId.innerText = "Ocultar Códigos"
+    } else {
+        btnId.innerText = "Mostrar Códigos"
+      }
+    setStatebutton(!statebutton);
   }
+
   async function getCodesBySort() {
     const response = await fetch(
       `http://localhost:3500/couple/code/${sortId}`,
@@ -18,7 +36,7 @@ export default function DivContentFirst({ eventDate, hostName, sortId }) {
       }
     );
     const data = await response.json();
-    return data.data.codes;
+    return data.data;
   }
   return (
     <>
@@ -47,11 +65,18 @@ export default function DivContentFirst({ eventDate, hostName, sortId }) {
         </label>
       </div>
       <div>
-        <button className="btn" onClick={handleClick}>
-          Mostrar Codigos
+        <button
+          className="btn purple darken-4 w-100"
+          id={`btn${sortId}`}
+          onClick={handleClick}
+        >
+          Mostrar Códigos
         </button>
       </div>
-      <div id={`showCodes${sortId}`}></div>
+      <div>
+        {codes &&
+          codes.map((c) => <CodesContent couple={c} key={c.friendSecret} />)}
+      </div>
     </>
   );
 }

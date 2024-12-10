@@ -22,3 +22,19 @@
     font-weight: lighter;
     font-size: medium;
 }
+.isVisible{
+    display: none;
+}
+.d-flex{
+    display: flex;
+    gap: 30px
+}
+.w-100{
+    width: 100%;
+}
+.material-icons{
+  text-decoration: none;
+}
+.chip{
+    margin-top: 10px;
+}

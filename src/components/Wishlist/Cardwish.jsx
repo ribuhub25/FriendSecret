@@ -7,7 +7,7 @@ export default function Cardwish({data}) {
   
   return (
     <>
-      {data != null ? (
+      {!user ? (
         <div>
           <img
             src="https://static-cdn.drawnames.com/Content/Assets/gifts-christmas.svg?nc=202407011621"

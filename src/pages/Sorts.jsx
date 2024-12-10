@@ -7,7 +7,6 @@ export default function Sorts() {
   const user = location.state;
   console.log(user);
   
-  
   const [sorts, setSorts] = useState([]);
   useEffect(() => {
     const fetchSorts = async () => {
@@ -22,7 +21,7 @@ export default function Sorts() {
   },[]);
   async function getSortsByHost() {
     const response = await fetch(`http://localhost:3500/sorts/${user.email}`, {
-      method: "GET"
+      method: "GET",
     });
     const data = await response.json();
     console.log(data);
