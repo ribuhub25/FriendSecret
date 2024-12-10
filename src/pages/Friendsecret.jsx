@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Friendsecret.css";
-import InputText from "../components/FriendSecret/inputText";
 import { toast } from "materialize-css";
+import Inputext from "../components/FriendSecret/inputext";
 
 export default function Friendsecret() { 
   const location = useLocation();
@@ -27,7 +27,7 @@ export default function Friendsecret() {
     if (participantes.length < 5) {
       setParticipantes([
         ...participantes,
-        <InputText
+        <Inputext
           key={participantes.length + 4}
           id={participantes.length + 4}
         />,

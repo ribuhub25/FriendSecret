@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function InputText({id}) {
+export default function Inputext({id}) {
     return (
       <div className="input-field col s6">
         <input id={`p${id}`} type="text" className="validate" />
@@ -9,6 +9,6 @@ export default function InputText({id}) {
     );
 }
 
-InputText.propTypes = {
+Inputext.propTypes = {
   id: PropTypes.number,
 };
