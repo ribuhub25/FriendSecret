@@ -3,6 +3,24 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.div-img{
+    background-color: rgb(50, 43, 63);
+    height: 200px;
+    align-content: space-around;
+}
+.img-perfil{
+    width: 100px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    /* Se ajusta al mismo valor que el width */
+    object-fit: cover;
+}
+.title-perfil{
+    color: white;
+    font-size: larger;
+    font-weight: lighter;
+    padding-top: 10px;
+}
 
 @media (max-width: 768px) {
     .card{

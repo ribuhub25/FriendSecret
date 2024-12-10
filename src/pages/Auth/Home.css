@@ -1,3 +1,7 @@
+.home-container{
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .card-action{
     margin: auto;
 }
@@ -22,7 +26,9 @@
 .flex-row {
     flex-direction: row;
 }
-
+.logo-2{
+    width: 150px;
+}
 @media (max-width: 768px) {
     .title {
         text-align: center;
