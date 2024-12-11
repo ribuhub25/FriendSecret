@@ -5,6 +5,8 @@ import "./Wishlist.css";
 export default function Wishlist({ user = "ROOT" }) {
   const location = useLocation();
   const data = location.state;
+  console.log(data);
+  
     return (
       <>
         {data != null ? (

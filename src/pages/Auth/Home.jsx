@@ -27,7 +27,7 @@ export function Home() {
     var code = document.getElementById("txtCode").value;
     console.log(code);
     try {
-      const response = await fetch(`http://localhost:3500/couple/${code}`, {
+      const response = await fetch(`http://localhost:3500/couple/info/${code}`, {
         method: "GET",
       });
       const data = await response.json();
@@ -43,7 +43,7 @@ export function Home() {
     console.log(data);
     
     if (data.result == "success") {
-      navigate(`/sorts`, { state: data });
+      navigate(`/wishlist`, { state: data });
     } else {
       HideLoader();
     }    

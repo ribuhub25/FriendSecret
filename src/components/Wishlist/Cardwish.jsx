@@ -3,11 +3,10 @@ import "./Cardwish.css";
 export default function Cardwish({data}) {
   const location = useLocation();
   const user = location.state;
-  console.log(data);
   
   return (
     <>
-      {!user ? (
+      { data ? (
         <div>
           <img
             src="https://static-cdn.drawnames.com/Content/Assets/gifts-christmas.svg?nc=202407011621"
@@ -16,7 +15,7 @@ export default function Cardwish({data}) {
           <div className="blue darken-1 title-container">
             <span className="title-wish-first">{data.data.name}</span>
           </div>
-          <div className="col s12 m6 d-flex flex-column" id="dSort">
+          <div className="d-flex flex-column g-3 pt-3" id="dSort">
             <div className="card">
               <div className="blue darken-1 title-container">
                 <span className="title-wish">

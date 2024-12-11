@@ -7,7 +7,6 @@ export default function DivContentFirst({ eventDate, hostName, sortId }) {
   const [statebutton, setStatebutton] = useState(false);
   async function getCodes() {
     const data = await getCodesBySort();
-    console.log(data);
     setCodes([...codes, data]);
   };
   useEffect(() => {
@@ -38,6 +37,7 @@ export default function DivContentFirst({ eventDate, hostName, sortId }) {
     const data = await response.json();
     return data.data;
   }
+  
   return (
     <>
       <div className="input-field col s6">

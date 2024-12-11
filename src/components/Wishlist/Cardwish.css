@@ -11,3 +11,12 @@
 .title-container{
     padding: 10px;
 }
+.card{
+    width: 100%;
+}
+.g-3{
+    gap: 5px;
+}
+.pt-3{
+    padding-top: 12px;
+}

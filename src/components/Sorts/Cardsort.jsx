@@ -6,6 +6,7 @@ import DivContentThird from "./DivContentThird";
 export default function Cardsort({ title, cardNumber, eventDate, hostName, sortId, data }) {
   const [content, setContent] = useState([]);
   useEffect(() => {
+    
     switch (cardNumber) {
       case "1":
         setContent([
