@@ -19,7 +19,7 @@ export default function Header() {
       <nav className="purple darken-4">
         <div className="nav-wrapper">
           <a onClick={()=>{navigate("/",{state: user})}} className="brand-logo">
-            <img src="/src/assets/agentSecret.png" className="logo" />
+            <img src="/assets/agentSecret.png" className="logo" />
           </a>
           <a href="#" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
@@ -51,7 +51,7 @@ export default function Header() {
               </div>
             ) : (
               <div className="chip">
-                <img src="/src/assets/agentSecret.png" alt="user" />
+                <img src="/assets/agentSecret.png" alt="user" />
                 <b>User</b>: usuario Secreto 😎
               </div>
             )}

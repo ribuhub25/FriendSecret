@@ -12,8 +12,8 @@ export default function Footer() {
                 Secreto desde aquí fácil ✅ y rápido 🚀.
               </p>
               <p className="grey-text text-lighten-4">
-                <img src="/src/assets/reactIcon.png" className="icons" />
-                <img src="/src/assets/nodeJsIcon.png" className="icons" />
+                <img src="/assets/reactIcon.png" className="icons" />
+                <img src="/assets/nodeJsIcon.png" className="icons" />
               </p>
             </div>
 
@@ -22,7 +22,7 @@ export default function Footer() {
               <ul>
                 <li>
                   <a className="grey-text text-lighten-3" href="#!">
-                    <img src="/src/assets/github.png" className="icons" />
+                    <img src="/assets/github.png" className="icons" />
                   </a>
                 </li>
               </ul>
