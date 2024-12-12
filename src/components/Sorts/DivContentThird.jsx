@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import Option from "./option";
+import Option from "./Option";
 
 export default function DivContentThird({ data }) {
   const navigate = useNavigate();
