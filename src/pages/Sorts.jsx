@@ -20,7 +20,7 @@ export default function Sorts() {
     fetchSorts();
   },[]);
   async function getSortsByHost() {
-    const response = await fetch(`http://localhost:3500/sorts/${user.email}`, {
+    const response = await fetch(`https://friendsecretback.onrender.com/sorts/${user.email}`, {
       method: "GET",
     });
     const data = await response.json();

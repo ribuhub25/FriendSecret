@@ -27,7 +27,7 @@ export default function DivContentThird({ data }) {
   },[sorts]) 
 
  async function getSortsByUser() {
-    const response = await fetch(`http://localhost:3500/sorts/${user.email}`, {
+    const response = await fetch(`https://friendsecretback.onrender.com/sorts/${user.email}`, {
       method: "GET",
     });
     const data = await response.json();
@@ -47,7 +47,7 @@ export default function DivContentThird({ data }) {
   }
   async function getCodesBySort(sortId) {
     const response = await fetch(
-      `http://localhost:3500/couple/code/${sortId}`,
+      `https://friendsecretback.onrender.com/couple/code/${sortId}`,
       {
         method: "GET",
       }
@@ -57,7 +57,7 @@ export default function DivContentThird({ data }) {
   }
   async function getInfoCouple(code) {
     try {
-      const response = await fetch(`http://localhost:3500/couple/info/${code}`, {
+      const response = await fetch(`https://friendsecretback.onrender.com/couple/info/${code}`, {
         method: "GET",
       });
       const data = await response.json();

@@ -50,7 +50,7 @@ export default function Friendsecret() {
     navigate(`/sorts`, { state: obj });
   }
   async function GetUserId() {
-    const response = await fetch(`http://localhost:3500/users/${user.email}`, {
+    const response = await fetch(`https://friendsecretback.onrender.com/users/${user.email}`, {
       method: "GET",
     });
     const data = await response.json();
@@ -74,7 +74,7 @@ export default function Friendsecret() {
     };
     console.log(sort);
     
-    const response = await fetch(`http://localhost:3500/sorts/create`, {
+    const response = await fetch(`https://friendsecretback.onrender.com/sorts/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

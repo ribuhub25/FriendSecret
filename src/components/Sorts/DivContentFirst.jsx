@@ -29,7 +29,7 @@ export default function DivContentFirst({ eventDate, hostName, sortId }) {
 
   async function getCodesBySort() {
     const response = await fetch(
-      `http://localhost:3500/couple/code/${sortId}`,
+      `https://friendsecretback.onrender.com/couple/code/${sortId}`,
       {
         method: "GET",
       }

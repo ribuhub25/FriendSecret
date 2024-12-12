@@ -1,5 +1,5 @@
 export async function api ({user, token}) {
-    const response = await fetch("http://localhost:3500/saveuser", {
+    const response = await fetch("https://friendsecretback.onrender.com/saveuser", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,

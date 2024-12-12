@@ -27,7 +27,7 @@ export function Home() {
     var code = document.getElementById("txtCode").value;
     console.log(code);
     try {
-      const response = await fetch(`http://localhost:3500/couple/info/${code}`, {
+      const response = await fetch(`https://friendsecretback.onrender.com/couple/info/${code}`, {
         method: "GET",
       });
       const data = await response.json();
@@ -60,7 +60,7 @@ export function Home() {
 
   async function saveUser() {
     var tkn = await token();
-    const response = await fetch(`http://localhost:3500/users/save`, {
+    const response = await fetch(`https://friendsecretback.onrender.com/users/save`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${tkn}`,
